@@ -1,0 +1,26 @@
+@{
+    ViewData["Title"] = "Login Page";
+    string msg = ViewData["msg"] as string;
+}
+
+
+<div class="text-center">
+    <fieldset>
+    <form method = "post">
+    <legend> Login Employee</legend>
+    <div>
+    Email : <input type="text" name="Email"/>
+    <br>
+    <br>
+    Password : <input type="text" name="Password"/>
+    <br>
+    <br>
+    <button type="submit">Login</button>
+    </br>
+    </br>
+    <a href="Register">New User?, Kindly Register...</a>
+    </div>
+
+    </form>
+    <p>@msg</p>
+</div>

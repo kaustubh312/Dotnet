@@ -1,0 +1,23 @@
+@using BOL;
+@{
+    ViewData["Title"] = "Login Page";
+}
+<h1>All Employee Profiles</h1>
+<br>
+<h3><u>Showing Details of Employee</u></h3>
+
+</br>
+</br>
+</br>
+
+@{
+    List<Employee> allEmployee = ViewData["emp"] as List<Employee>;
+    @foreach(Employee emp in allEmployee){
+        <p>
+            ID : @emp.EmployeeId<br><br>
+            Name : @emp.EmployeeName<br><br>
+            Email : @emp.Email<br><br>
+            <a href="/Home/Edit/@emp.EmployeeId">Edit</a>&nbsp&nbsp&nbsp&nbsp<a href="/Home/Delete/@emp.EmployeeId">Delete</a><hr> 
+        </p>
+    }
+}
